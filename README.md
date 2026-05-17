@@ -7,6 +7,7 @@ Progetto Hardhat per creare e distribuire una coin ERC-20 su Base.
 - Contratto `BaseCoin` ERC-20 basato su OpenZeppelin.
 - Contratto `AshSale` per vendere ASH in cambio di USDC.
 - Immagine/logo della coin in `assets/ash-coin.png`.
+- Logo 64x64 pronto per explorer/wallet in `assets/ash-coin-64.png`.
 - Metadata template in `metadata/ashes-token.json`.
 - Supply iniziale fissa, mintata una sola volta nel costruttore.
 - Deploy configurato per Base Sepolia e Base mainnet.
@@ -55,6 +56,12 @@ L'immagine locale della coin e':
 assets/ash-coin.png
 ```
 
+La versione 64x64 pronta per BaseScan e':
+
+```text
+assets/ash-coin-64.png
+```
+
 Per farla apparire su wallet, explorer o listing, carica `assets/ash-coin.png` su IPFS o su un URL pubblico stabile, poi sostituisci `ipfs://REPLACE_WITH_ASH_COIN_IMAGE_CID` in `metadata/ashes-token.json`.
 
 Con Pinata puoi farlo con:
@@ -72,6 +79,17 @@ metadata/ashes-token.github.json
 ```
 
 GitHub non e' IPFS, ma puo' ospitare l'immagine con un URL pubblico `raw.githubusercontent.com`. Dopo aver pubblicato questo progetto su GitHub, sostituisci `REPLACE_OWNER`, `REPLACE_REPO` e `REPLACE_BRANCH` nel file `metadata/ashes-token.github.json`.
+
+## Far apparire il logo nei wallet
+
+Per un ERC-20 il logo non e' letto direttamente dal contratto. Dopo il deploy:
+
+1. Verifica il contratto su BaseScan.
+2. Apri la pagina del token su BaseScan.
+3. Invia una richiesta "Token Info Update" come creator/team del token.
+4. Usa `assets/ash-coin-64.png` come logo e inserisci i link pubblici del progetto.
+
+Molti wallet e app leggono il logo da explorer, token list o database esterni. Quindi il passaggio BaseScan aumenta la compatibilita', ma la visualizzazione puo' dipendere dal singolo wallet e dalla sua cache.
 
 Per verificare il contratto dopo il deploy:
 
