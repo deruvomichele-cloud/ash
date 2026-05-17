@@ -1,0 +1,83 @@
+# Base ERC-20 Coin
+
+Progetto Hardhat per creare e distribuire una coin ERC-20 su Base.
+
+## Cosa include
+
+- Contratto `BaseCoin` ERC-20 basato su OpenZeppelin.
+- Contratto `AshSale` per vendere ASH in cambio di USDC.
+- Immagine/logo della coin in `assets/ash-coin.png`.
+- Metadata template in `metadata/ashes-token.json`.
+- Supply iniziale fissa, mintata una sola volta nel costruttore.
+- Deploy configurato per Base Sepolia e Base mainnet.
+- Test base per nome, simbolo, supply e destinatario iniziale.
+
+## Configurazione
+
+1. Copia `.env.example` in `.env`.
+2. Imposta `WALLET_PRIVATE_KEY` con la chiave del wallet che firma il deploy.
+3. Imposta `TOKEN_NAME`, `TOKEN_SYMBOL`, `INITIAL_SUPPLY` e `INITIAL_OWNER`.
+4. Per testnet usa ETH su Base Sepolia; per mainnet usa ETH su Base.
+
+Non condividere mai seed phrase o private key. Usa preferibilmente un wallet nuovo e dedicato al deploy.
+
+## Comandi
+
+```bash
+npm run compile
+npm test
+npm run deploy:base-sepolia
+npm run deploy:sale:base-sepolia
+npm run deploy:base-mainnet
+```
+
+## Vendita ASH con USDC
+
+Su Base Sepolia il contratto `AshSale` usa USDC all'indirizzo ufficiale Circle:
+
+```text
+0x036CbD53842c5426634e7929541eC2318f3dCF7e
+```
+
+La variabile `ASH_PER_USDC=7` imposta il cambio:
+
+```text
+1 USDC = 7 ASH
+```
+
+Il deploy `deploy:sale:base-sepolia` crea sia `BaseCoin` sia `AshSale`. Se `INITIAL_OWNER` coincide con il wallet che fa deploy, lo script trasferisce automaticamente `SALE_ALLOCATION` ASH al contratto di vendita.
+
+## Immagine della coin
+
+L'immagine locale della coin e':
+
+```text
+assets/ash-coin.png
+```
+
+Per farla apparire su wallet, explorer o listing, carica `assets/ash-coin.png` su IPFS o su un URL pubblico stabile, poi sostituisci `ipfs://REPLACE_WITH_ASH_COIN_IMAGE_CID` in `metadata/ashes-token.json`.
+
+Con Pinata puoi farlo con:
+
+```bash
+npm run upload:metadata
+```
+
+Prima imposta `PINATA_JWT` nel file `.env`. Lo script carica l'immagine, aggiorna `metadata/ashes-token.json` con il CID reale e carica anche il metadata JSON.
+
+Alternativa GitHub per testnet:
+
+```text
+metadata/ashes-token.github.json
+```
+
+GitHub non e' IPFS, ma puo' ospitare l'immagine con un URL pubblico `raw.githubusercontent.com`. Dopo aver pubblicato questo progetto su GitHub, sostituisci `REPLACE_OWNER`, `REPLACE_REPO` e `REPLACE_BRANCH` nel file `metadata/ashes-token.github.json`.
+
+Per verificare il contratto dopo il deploy:
+
+```bash
+npm run verify:base-sepolia -- <contract_address> "My Base Coin" "MBC" 1000000 0xYourWallet
+npm run verify:base-mainnet -- <contract_address> "My Base Coin" "MBC" 1000000 0xYourWallet
+```
+
+Base mainnet usa chain ID `8453`; Base Sepolia usa chain ID `84532`.
