@@ -14,6 +14,12 @@ async function main() {
   const ashPerUsdc = process.env.ASH_PER_USDC || "7";
   const saleAllocation = process.env.SALE_ALLOCATION || "700000";
 
+  if (!ethers.isAddress(initialOwner) || !ethers.isAddress(treasury)) {
+    throw new Error(
+      "Set INITIAL_OWNER and TREASURY_ADDRESS to valid wallet addresses in .env."
+    );
+  }
+
   const token = await ethers.deployContract("BaseCoin", [
     name,
     symbol,
@@ -49,6 +55,12 @@ async function main() {
   console.log(`USDC token: ${usdcAddress}`);
   console.log(`Rate: 1 USDC = ${ashPerUsdc} ${symbol}`);
   console.log(`Treasury: ${treasury}`);
+  console.log(
+    `Verify ASH: npx hardhat verify --network baseSepolia ${tokenAddress} "${name}" "${symbol}" ${initialSupply} ${initialOwner}`
+  );
+  console.log(
+    `Verify sale: npx hardhat verify --network baseSepolia ${saleAddress} ${usdcAddress} ${tokenAddress} ${treasury} ${ashPerUsdc} ${deployer.address}`
+  );
 }
 
 main().catch((error) => {

@@ -27,6 +27,7 @@ Non condividere mai seed phrase o private key. Usa preferibilmente un wallet nuo
 ```bash
 npm run compile
 npm test
+npm run ready:base-sepolia
 npm run deploy:base-sepolia
 npm run deploy:sale:base-sepolia
 npm run deploy:base-mainnet
