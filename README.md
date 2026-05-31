@@ -93,7 +93,7 @@ Per un ERC-20 il logo non e' letto direttamente dal contratto. Dopo il deploy:
 
 Molti wallet e app leggono il logo da explorer, token list o database esterni. Quindi il passaggio BaseScan aumenta la compatibilita', ma la visualizzazione puo' dipendere dal singolo wallet e dalla sua cache.
 
-Per verificare il contratto dopo il deploy:
+Per verificare il contratto dopo il deploy imposta `ETHERSCAN_API_KEY` con una chiave Etherscan API v2:
 
 ```bash
 npm run verify:base-sepolia -- <contract_address> "My Base Coin" "MBC" 1000000 0xYourWallet

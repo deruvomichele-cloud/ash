@@ -5,6 +5,7 @@ const placeholderValues = new Set([
   "0x_your_deployer_private_key",
   "0x_your_wallet_address",
   "your_basescan_api_key",
+  "your_etherscan_api_v2_key",
   "paste_your_pinata_jwt_here",
 ]);
 
@@ -70,10 +71,10 @@ async function main() {
 
   report(
     "BaseScan verification (after deploy)",
-    isConfigured(process.env.BASESCAN_API_KEY),
-    isConfigured(process.env.BASESCAN_API_KEY)
+    isConfigured(process.env.ETHERSCAN_API_KEY),
+    isConfigured(process.env.ETHERSCAN_API_KEY)
       ? "API key configured"
-      : "add BASESCAN_API_KEY to verify source code and request logo update"
+      : "add ETHERSCAN_API_KEY to verify source code on BaseScan"
   );
 
   if (deploymentResults.every(Boolean)) {
