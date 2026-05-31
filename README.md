@@ -8,6 +8,7 @@ Progetto Hardhat per creare e distribuire una coin ERC-20 su Base.
 - Contratto `AshSale` per vendere ASH in cambio di USDC.
 - Immagine/logo della coin in `assets/ash-coin.png`.
 - Logo 64x64 pronto per explorer/wallet in `assets/ash-coin-64.png`.
+- Logo SVG 32x32 pronto per BaseScan in `assets/ash-coin-32.svg`.
 - Metadata template in `metadata/ashes-token.json`.
 - Supply iniziale fissa, mintata una sola volta nel costruttore.
 - Deploy configurato per Base Sepolia e Base mainnet.
@@ -152,6 +153,18 @@ Logo wallet pubblico:
 
 ```text
 https://raw.githubusercontent.com/deruvomichele-cloud/ash/main/assets/ash-coin-64.png
+```
+
+Logo SVG 32x32 per BaseScan:
+
+```text
+https://raw.githubusercontent.com/deruvomichele-cloud/ash/main/assets/ash-coin-32.svg
+```
+
+Contatto progetto:
+
+```text
+onionhole@protonmail.com
 ```
 
 Nota: l'endpoint `tokenupdate` di BaseScan non e' disponibile su Base Sepolia. Il logo pubblico e' pronto per wallet o token list che supportano asset personalizzati; la richiesta BaseScan Token Info Update va eseguita dopo il deploy su Base mainnet.

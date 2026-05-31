@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" role="img" aria-labelledby="title desc">
+  <title id="title">ASHES token logo</title>
+  <desc id="desc">Circular ASH token icon for BaseScan and wallet listings.</desc>
+  <defs>
+    <linearGradient id="ash-bg" x1="4" y1="3" x2="28" y2="29" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff2b8"/>
+      <stop offset="0.5" stop-color="#f6a21a"/>
+      <stop offset="1" stop-color="#6d3200"/>
+    </linearGradient>
+    <linearGradient id="ash-flame" x1="16" y1="6" x2="16" y2="25" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.45" stop-color="#ffd25a"/>
+      <stop offset="1" stop-color="#ff5a1f"/>
+    </linearGradient>
+  </defs>
+  <circle cx="16" cy="16" r="15" fill="#15100b"/>
+  <circle cx="16" cy="16" r="13.5" fill="url(#ash-bg)"/>
+  <path fill="#2b1608" opacity="0.28" d="M7 21.5c4.8 3.5 12.6 3.3 18-.8-2.4 5-9 7.1-14.3 4.5A11.3 11.3 0 0 1 7 21.5Z"/>
+  <path fill="url(#ash-flame)" d="M16.4 5.9c1.5 3.4-.8 4.9-.8 7 0 1 .6 1.8 1.6 2.6.1-2.1 1.4-3.6 3.3-5.2-.2 3.1 2.8 4.9 2.8 8.3 0 4.1-3.2 7.4-7.3 7.4s-7.3-3.2-7.3-7.3c0-3.7 3.1-6.1 4.6-8.5.8-1.3 1.1-2.6 3.1-4.3Z"/>
+  <path fill="#fff8d8" d="M16.1 17.1c.9 1.9 2.4 2.8 2.4 4.6a2.7 2.7 0 0 1-5.4 0c0-1.8 1.9-2.8 3-4.6Z"/>
+  <path fill="#3b210f" d="M10.4 25.6h11.2v1.3H10.4z"/>
+</svg>
