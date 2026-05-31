@@ -109,3 +109,11 @@ ASHES e il contratto di vendita sono stati distribuiti su Base Sepolia. Gli indi
 ```text
 deployments/base-sepolia.json
 ```
+
+Logo wallet pubblico:
+
+```text
+https://raw.githubusercontent.com/deruvomichele-cloud/ash/main/assets/ash-coin-64.png
+```
+
+Nota: l'endpoint `tokenupdate` di BaseScan non e' disponibile su Base Sepolia. Il logo pubblico e' pronto per wallet o token list che supportano asset personalizzati; la richiesta BaseScan Token Info Update va eseguita dopo il deploy su Base mainnet.

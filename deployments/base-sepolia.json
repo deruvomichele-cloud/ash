@@ -17,5 +17,10 @@
   "explorer": {
     "token": "https://sepolia.basescan.org/token/0x04A5cA228e01A64109A13ab0C4A9f058647dc06f",
     "sale": "https://sepolia.basescan.org/address/0xcEfC2896DE317486ba32B18d75cFc8e4afeb5Ece"
+  },
+  "assets": {
+    "repository": "https://github.com/deruvomichele-cloud/ash",
+    "walletLogo": "https://raw.githubusercontent.com/deruvomichele-cloud/ash/main/assets/ash-coin-64.png",
+    "metadata": "https://raw.githubusercontent.com/deruvomichele-cloud/ash/main/metadata/ashes-token.github.json"
   }
 }
