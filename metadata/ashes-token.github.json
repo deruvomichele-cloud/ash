@@ -3,7 +3,7 @@
   "symbol": "ASH",
   "decimals": 18,
   "description": "ASHES token on Base. Exchange target: 1 USDC = 7 ASH.",
-  "image": "https://raw.githubusercontent.com/REPLACE_OWNER/REPLACE_REPO/REPLACE_BRANCH/assets/ash-coin.png",
+  "image": "https://raw.githubusercontent.com/deruvomichele-cloud/ash/main/assets/ash-coin-64.png",
   "website": "",
   "chainId": 84532
 }
