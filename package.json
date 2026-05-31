@@ -7,10 +7,13 @@
     "compile": "hardhat compile",
     "test": "hardhat test",
     "configure:wallet": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/configure-wallet.ps1",
+    "configure:wallet:mainnet": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/configure-mainnet-wallet.ps1",
     "ready:base-sepolia": "node scripts/check-testnet-ready.js",
+    "ready:base-mainnet": "node scripts/check-mainnet-ready.js",
     "deploy:base-sepolia": "hardhat run scripts/deploy.js --network baseSepolia",
     "deploy:base-mainnet": "hardhat run scripts/deploy.js --network baseMainnet",
     "deploy:sale:base-sepolia": "hardhat run scripts/deploy-token-and-sale.js --network baseSepolia",
+    "deploy:sale:base-mainnet": "hardhat run scripts/deploy-token-and-sale.js --network baseMainnet",
     "upload:metadata": "node scripts/upload-to-pinata.js",
     "verify:base-sepolia": "hardhat verify --network baseSepolia",
     "verify:base-mainnet": "hardhat verify --network baseMainnet"

@@ -31,7 +31,37 @@ npm run configure:wallet
 npm run ready:base-sepolia
 npm run deploy:base-sepolia
 npm run deploy:sale:base-sepolia
-npm run deploy:base-mainnet
+```
+
+## Deploy Base mainnet
+
+Base mainnet usa chain ID `8453`. Il contratto di vendita usa USDC Circle ufficiale:
+
+```text
+0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913
+```
+
+Usa un wallet nuovo dedicato alla mainnet. Non riutilizzare wallet o chiavi private esposte durante i test.
+
+Configura localmente `.env`:
+
+```text
+MAINNET_INITIAL_OWNER=0xYourNewMainnetWallet
+MAINNET_TREASURY_ADDRESS=0xYourNewMainnetWallet
+MAINNET_DEPLOY_CONFIRMATION=I_UNDERSTAND_THIS_USES_REAL_FUNDS
+```
+
+Salva la chiave senza mostrarla nel terminale e controlla la configurazione:
+
+```bash
+npm run configure:wallet:mainnet
+npm run ready:base-mainnet
+```
+
+Il deploy reale va eseguito solo dopo aver controllato supply, treasury, cambio e saldo ETH:
+
+```bash
+npm run deploy:sale:base-mainnet
 ```
 
 ## Vendita ASH con USDC
