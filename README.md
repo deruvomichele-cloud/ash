@@ -155,3 +155,11 @@ https://raw.githubusercontent.com/deruvomichele-cloud/ash/main/assets/ash-coin-6
 ```
 
 Nota: l'endpoint `tokenupdate` di BaseScan non e' disponibile su Base Sepolia. Il logo pubblico e' pronto per wallet o token list che supportano asset personalizzati; la richiesta BaseScan Token Info Update va eseguita dopo il deploy su Base mainnet.
+
+## Deploy Base mainnet completato
+
+ASHES e il contratto di vendita sono stati distribuiti su Base mainnet. Gli indirizzi e i link explorer sono salvati in:
+
+```text
+deployments/base-mainnet.json
+```

@@ -5,5 +5,5 @@
   "description": "ASHES token on Base. Exchange target: 1 USDC = 7 ASH.",
   "image": "ipfs://REPLACE_WITH_ASH_COIN_IMAGE_CID",
   "website": "",
-  "chainId": 84532
+  "chainId": 8453
 }

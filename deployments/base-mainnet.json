@@ -1,0 +1,26 @@
+{
+  "network": "baseMainnet",
+  "chainId": 8453,
+  "token": {
+    "name": "ASHES",
+    "symbol": "ASH",
+    "address": "0xd4FbB5E4Dd24C3F9A0F58Efa656A489D24E93BCd",
+    "totalSupply": "1000000"
+  },
+  "sale": {
+    "address": "0x7A47db587dB07FAAd7614d25Bca468465BB6E909",
+    "usdcAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "ashPerUsdc": "7",
+    "saleAllocation": "700000",
+    "treasury": "0x3826E50b21CD7cB76Cb4cF579dBDEe46ccd00988"
+  },
+  "explorer": {
+    "token": "https://basescan.org/token/0xd4FbB5E4Dd24C3F9A0F58Efa656A489D24E93BCd",
+    "sale": "https://basescan.org/address/0x7A47db587dB07FAAd7614d25Bca468465BB6E909"
+  },
+  "assets": {
+    "repository": "https://github.com/deruvomichele-cloud/ash",
+    "walletLogo": "https://raw.githubusercontent.com/deruvomichele-cloud/ash/main/assets/ash-coin-64.png",
+    "metadata": "https://raw.githubusercontent.com/deruvomichele-cloud/ash/main/metadata/ashes-token.github.json"
+  }
+}
