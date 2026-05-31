@@ -27,6 +27,7 @@ Non condividere mai seed phrase o private key. Usa preferibilmente un wallet nuo
 ```bash
 npm run compile
 npm test
+npm run configure:wallet
 npm run ready:base-sepolia
 npm run deploy:base-sepolia
 npm run deploy:sale:base-sepolia
@@ -100,3 +101,11 @@ npm run verify:base-mainnet -- <contract_address> "My Base Coin" "MBC" 1000000 0
 ```
 
 Base mainnet usa chain ID `8453`; Base Sepolia usa chain ID `84532`.
+
+## Deploy Base Sepolia
+
+ASHES e il contratto di vendita sono stati distribuiti su Base Sepolia. Gli indirizzi e i link explorer sono salvati in:
+
+```text
+deployments/base-sepolia.json
+```

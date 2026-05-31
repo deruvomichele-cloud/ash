@@ -1,0 +1,21 @@
+{
+  "network": "baseSepolia",
+  "chainId": 84532,
+  "token": {
+    "name": "ASHES",
+    "symbol": "ASH",
+    "address": "0x04A5cA228e01A64109A13ab0C4A9f058647dc06f",
+    "totalSupply": "1000000"
+  },
+  "sale": {
+    "address": "0xcEfC2896DE317486ba32B18d75cFc8e4afeb5Ece",
+    "usdcAddress": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+    "ashPerUsdc": "7",
+    "saleAllocation": "700000",
+    "treasury": "0xA6Bb39f60D5B5856334F6A49039a49070b0706BE"
+  },
+  "explorer": {
+    "token": "https://sepolia.basescan.org/token/0x04A5cA228e01A64109A13ab0C4A9f058647dc06f",
+    "sale": "https://sepolia.basescan.org/address/0xcEfC2896DE317486ba32B18d75cFc8e4afeb5Ece"
+  }
+}

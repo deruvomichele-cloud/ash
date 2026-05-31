@@ -6,6 +6,7 @@
   "scripts": {
     "compile": "hardhat compile",
     "test": "hardhat test",
+    "configure:wallet": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/configure-wallet.ps1",
     "ready:base-sepolia": "node scripts/check-testnet-ready.js",
     "deploy:base-sepolia": "hardhat run scripts/deploy.js --network baseSepolia",
     "deploy:base-mainnet": "hardhat run scripts/deploy.js --network baseMainnet",
