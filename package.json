@@ -8,6 +8,7 @@
     "test": "hardhat test",
     "configure:wallet": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/configure-wallet.ps1",
     "configure:wallet:mainnet": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/configure-mainnet-wallet.ps1",
+    "generate:wallet:mainnet": "node scripts/generate-mainnet-wallet.js",
     "ready:base-sepolia": "node scripts/check-testnet-ready.js",
     "ready:base-mainnet": "node scripts/check-mainnet-ready.js",
     "deploy:base-sepolia": "hardhat run scripts/deploy.js --network baseSepolia",

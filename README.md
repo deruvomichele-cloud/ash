@@ -58,6 +58,14 @@ npm run configure:wallet:mainnet
 npm run ready:base-mainnet
 ```
 
+Per generare localmente un wallet nuovo con una recovery phrase di 24 parole:
+
+```bash
+npm run generate:wallet:mainnet
+```
+
+Trascrivi le 24 parole su carta. Non inviarle in chat, non fare screenshot e non salvarle nel cloud.
+
 Il deploy reale va eseguito solo dopo aver controllato supply, treasury, cambio e saldo ETH:
 
 ```bash
